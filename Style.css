@@ -1,0 +1,160 @@
+:root {
+  --primary: #2c6ecb;
+  --secondary: #ffffff;
+  --accent: #f6f8fc;
+  --dark: #1c1c1c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--dark);
+  background-color: var(--secondary);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  opacity: 0.8;
+}
+
+/* Hero */
+.hero {
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e6e6e6;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Grid Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--accent);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.footer .social a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* Responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    width: 100%;
+  }
+  .nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
