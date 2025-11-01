@@ -1,0 +1,14 @@
+/bhimkala-foundation
+│
+├── index.html
+├── about.html          (duplicate index layout; add About content)
+├── projects.html       (list detailed projects)
+├── get-involved.html   (donation & volunteer info)
+├── contact.html        (contact form + map)
+├── style.css
+├── script.js
+└── /assets
+     ├── hero.jpg
+     ├── education.jpg
+     ├── healthcare.jpg
+     └── community.jpg
